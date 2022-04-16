@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form action="/test" method="post" >
+    <br>
+    <br>
+  <div class="form-group">
+    <label for="danceability">Danceability</label>
+    <input type="text" class="form-control" id="danceability" name="danceability" required="required"  >
+  </div>
+  <div class="form-group">
+    <label for="energy">Energy</label>
+    <input type="text" class="form-control" id="energy" name="energy" required="required"p>
+  </div>
+  <div class="form-group">
+    <label for="loudness">Loudness</label>
+    <input type="text" class="form-control" id="loudness" name="loudness" required="required"p>
+  </div>
+  <div class="form-group">
+    <label for="speechiness">Speechiness</label>
+    <input type="text" class="form-control" id="speechiness" name="speechiness" required="required" p>
+  </div>
+  <div class="form-group">
+    <label for="acousticness">Acousticness</label>
+    <input type="text" class="form-control" id="acousticness" name="acousticness" required="required" p>
+  </div>
+  <div class="form-group">
+    <label for="instrumentalness">Instrumentalness</label>
+    <input type="text" class="form-control" id="instrumentalness" name="instrumentalness" required="required" p>
+  </div>
+  <div class="form-group">
+    <label for="liveness">Liveness</label>
+    <input type="text" class="form-control" id="liveness" name="liveness" required="required"p>
+  </div>
+  <div class="form-group">
+    <label for="valence">Valence</label>
+    <input type="text" class="form-control" id="valence" name="valence" required="required"p>
+  </div>
+  <div class="form-group">
+    <label for="tempo">Tempo</label>
+    <input type="text" class="form-control" id="tempo" name="tempo" required="required"p>
+  </div>
+  <div class="form-group">
+    <label for="duration_ms">Duration (ms)</label>
+    <input type="text" class="form-control" id="duration_ms" name="duration_ms" required="required" p>
+  </div>
+  <div class="form-group">
+      <label for="key">Key</label>
+      <select id="key" name="key" class="form-control">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+      </select>
+    </div>
+  <div class="form-group">
+      <label for="time_signature">Time Signature</label>
+      <select id="time_signature" name="time_signature" class="form-control">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+  </div>
+  <div class="form-group">
+      <label for="mode">Mode</label>
+      <select id="mode" name="mode" class="form-control">
+        <option value="0">0</option>
+        <option value="1">1</option>
+      </select>
+    </div>
+  <button type="submit" class="btn btn-primary">Predict!</button>
+  <hr>
+</form>
+<br>
+<h3>{{output}}</h3>
+
+<br>
+{% endblock %}
+

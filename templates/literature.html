@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+        <h3>Literature Review</h3>
+            <br>
+            <h5>A. Music Genre Classification using Machine Learning Techniques Hareesh Bahuleyan</h5>
+            <p>The project’s aim is which has been mentioned in this
+article, about categorizing music files according to their
+genre. Two significant approaches have been tested and
+compared in this study. First one is deep learning approach
+and the second approach is traditional machine learning
+algorithms. The first model has been created with
+Convolutional Neural Networks (CNN) and the model has
+been trained end to end on the spectrogram of the audio
+signal. In the second part, features and the time domain has
+been extracted. Then, these features fed to CNN which are
+Logistic Regression, Random Forest, Gradient Boosting and
+Support Vector Machine. In this study, Audio Set which is a
+large-scale human annotated database of sounds has been
+used. This dataset has been created vy extracting 10-second
+sound clips from a total of 2.1 million YouTube videos. At
+the preprocessing step, signal-to-noise ratio (SNR) of the
+signal has been improved by pre-emphasis filter. Then deep
+learning has been used, in according to this genre
+classification can be done with no need of hand-created
+features. CNN has been widely used in the field of image
+classification. At this point, wave can be represented as a
+spectrogram which can be considered as an image. So, the
+spectrograms have been generated. Spectrograms have some
+characteristic patterns by examining the spectrograms.
+Convolution, pooling and non-linear activation operations
+has been applied. To prevent overfitting L-2 Regularization
+and Dropout strategies has been adopted. At the second part,
+Time domain features are central moments which are mean,
+standard deviation, skewness and kurtosis of the amplitude of
+the signal, zero crossing rate, Root mean square energy,
+tempo. Frequency domain features are Mel-Frequency
+cepstral coefficients, Chroma features, Spectral centroid,
+Spectral band-width, Spectral Contrast, Spectral Roll-off.
+Logistic regression classifier implemented as one-vs-rest
+method. As a result of the class which has the highest
+probability chosen as predicted class. Random forest
+classifier is an ensemble learner and uses bootstrap
+aggregation and random subset of features. As a result of
+predicted class has the majority vote from the individual
+classifiers. Gradient Boosting Classifier is also an ensemble
+learning algorithm which uses weak learners and
+interestingly, classifier becomes really powerful. Support
+Vector Machines classifier transforms the original input data
+into high dimensional space y using kernel trick. In this study
+radial basis function has been used. Accuracy, F-score and
+AUC metrics used to evaluate the performance of the models.
+The best performance in terms of all metrics is belong to the
+CNN model which based on VCG-16 which used only the
+spectrograms. And xtreme gradient boosting has really great
+scores at feature engineering-based models. Then most
+important features have been extracted from XGBoost model.</p>
+            <h5>B. IRJET- Music Genre Classification using Machine Learning Algorithms: A comparison</h5>
+            <p>The model which is in the study aims to categorize the
+music in terms of their genre. Free music archive dataset has
+been used. Multiple classification model has been applied and
+compared in according to their accuracy scores. Melspectrograms and spectrograms has been used. Companies
+use music classification for better recommendation to their
+customers. The dataset contains danceability, tempo, energy,
+etc. columns. Balanced dataset has been used. Deep Neural
+Networks provides the great results without using handcrafted features. CNN algorithm is a great choice for images
+and the sound wave can be represented as a spectrogram
+which can be considered as an image. Spectrograms has been
+generated with the signals. Convolutional Neural Networks
+and Convolutional Recurrent Neural Networks has been
+used. And the parallel model which uses both of the
+algorithms has been applied. To prevent overfitting Dropout
+strategy has been adopted. This strategy sets some neurons
+weight to zero randomly during training. So, every iteration
+is different than the other. The dataset has been randomly
+splitted into training set (80%), validation set (10%) and the
+test set (%10). Time domain features and frequency domain
+features has been extracted. Logistic Regression Classifier
+implemented as a one-vs-rest method. The class with highest
+probability is chosen as predicted class. Simple Artificial
+Neural Networks is a computational model-based approach.
+And also, it was appropriate for the complex nature of the
+dataset. Accuracy metric has been used for the evaluation of
+the model’s performance. CNN model has the best accuracy
+in the spectrogram-based models. And Simple Artificial
+Neural Network has the best accuracy in the feature-based
+models. As a result, increasing the training dataset might
+create the differences.</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+        <h3>Material And Methods</h3>
+            <br>
+            <h5>Used Technologies</h5>
+            <br>
+            <p> Python is an interpreted high-level general-purpose programming language [1]</p>
+            <p>Anaconda is a distribution of the Python and R programming languages for scientific computing (data
+science, machine learning applications, large-scale data
+processing, predictive analytics, etc.), that aims to
+simplify package management and deployment.[2]</p>
+            <p>Spyder is an open-source cross-platform integrated
+development environment for scientific programming in
+the Python language[3]</p>
+    <hr>
+            <br>
+            <h5>Used Libraries</h5>
+            <br>
+            <p>Pandas is a software library written for the Python
+programming language for data manipulation
+and analysis.[4]</p>
+            <p>Numpy is a library for the Python programming
+language, adding support for large, multidimensional arrays and matrices, along with a large
+collection of high-level mathematical functions to
+operate on these arrays.[5]</p>
+            <p>Matplotlib is a plotting library for the Python
+programming language and its numerical mathematics
+extension NumPy.[6]</p>
+            <p>Missingno is a Python library that provides the ability
+to understand the distribution of missing values through
+informative visualizations. [7]</p>
+            <p>Sklearn is a free software machine
+learning library for the Python programming language.
+[8]</p>
+    <hr>
+            <h5>Data Preprocessing</h5>
+            <br>
+            <p>Firstly, the types of all columns in the data set were
+examined and the object types were converted to
+categorical types, because the python programming
+language can perceive the object type as a string. If all
+values in a feature are different or the same, these features
+such as type, url, have been removed so that the model
+can be generalized.
+Then, missing values were determined by using
+visualization techniques. There were features with few
+missing values and one column with more than 50%
+missing values. It was examined whether the reason for
+the emptiness was random or not, and when it was
+decided that it was random, the column was deleted. The
+KNN imputer which is a machine learning technique, was
+used to fill in other missing values. Imputation was
+performed in a uniform way by looking at the 5 closest
+neighbors. Before using KNN imputer, the data was
+scaled.
+The most commonly used method for outlier analysis is
+the Interquartile range (IQR) calculation. However, a
+feature-based outlier analysis is made with the created
+boxplots. With the more advanced Local Outlier Factor
+technique, outliers are detected within the context. Values
+that are truly outliers are found. The parameters used for
+this technique are that n_neighbors is 20 and
+contamination is 0.1. After that, outliers were deleted
+from the data set.
+Since there are more numeric values in the dataset,
+categorical variables are converted to dummy format.
+Also duplicate lines were detected and deleted.
+When the target column is examined, the multinominal
+label values are unbalanced. For this reason, by using
+Synthetic Minority Oversampling Technique (SMOTE),
+all data has been increased by both copying and
+synthesizing to reach the number of the tag that has
+maximum number of instances. To use this technique,
+Label Encoder was used on the target column beforehand. </p>
+    </div>
+{% endblock %}

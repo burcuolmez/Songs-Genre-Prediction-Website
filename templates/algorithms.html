@@ -1,0 +1,227 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+        <h3>Algorithms And Experimental Results</h3>
+            <br>
+        <h5>Algorithms</h5>
+        <h7>KNN</h7>
+        <br>
+        <p>In the K-Nearest Neighbor algorithm, predictions are made based on the similarity of the observations.
+Estimates the target column based on the distances of
+the points from each other. The target column of the
+point to be estimated according to the K nearest
+neighbors of a point gives its class if it is a
+classification problem, and its mean value if it is a
+regression problem. While calculating, distances such
+as Euclidean distance, Manhattan distance or
+Minkowski distance can be used for continuous
+variables. The most commonly used is the Euclidean
+distance. Hamming distance is used for categorical
+variables.</p>
+        <br>
+        <h7>SVM</h7>
+        <br>
+        <p>The purpose of the support vector machine is to
+create a margin gap with the smallest error.
+is to determine the line or curve that includes the
+maximum point. It is an algorithm that gives high
+success values in classification problems. Moreover,
+since there are many types, many models can be
+created.</p>
+        <br>
+        <h7>ANN</h7>
+        <br>
+        <p>Artificial neural networks are an algorithm
+produced by taking the human brain as a reference.
+Since the data are collected by multiplying with certain
+weights, their effects on the model are checked.
+Finding the values of the weights is of great
+importance. Back propagation algorithms are used and
+it is an algorithm with a high probability of overlearning. Before creating a model, normalization and
+transformation must be done. It is a very timeconsuming algorithm.</p>
+        <br>
+        <h7>RF</h7>
+        <br>
+        <p>The Random Forest algorithm also evaluates the
+predictions produced by many decision trees by
+bringing them together. Randomness is preserved in
+the variables in the observations. Observations are
+selected by bootstrap random sample selection method
+and variables are selected by random subspace method.
+Random variable selection is made for each node
+selection. Trees are given weight according to their
+success. This algorithm is a highly preferred successful
+algorithm.
+</p>
+        <br>
+        <h7> Gaussian Naive Bayes </h7>
+        <br>
+        <p>This algorithm is a probability-based algorithm. It is
+used in classification problems. Calculates the
+probability that a particular sample belongs to each
+class. It is a successful algorithm in datasets containing
+multi-category class structure.</p>
+        <br>
+    <hr>
+        <h5>Optimization of the Model</h5>
+        <br>
+        <p>In classification analysis, accuracy is a metric that
+gives correctness. If this value is high, it shows how well
+the model can make predictions. As a result of the
+researches, it has been noticed that the Precision and
+Recall values are also important. Precision value deals
+with truly correct values and incorrectly correct values
+and determines how many are actually correct. Recall, on
+the other hand, determines how much of the operations
+that should actually be correct are correct. In addition, the
+F1 score value is the harmonic mean of the Precision and
+Recall values and generally used for comparing models.
+In addition to the Accuracy value, it is important for the
+model that these three values are high.
+ An increase in the performance of the model is
+detected by changing the values of the hyperparameters
+given while creating the model. For this reason, support
+was taken from the grid search algorithm to find the
+optimal parameters. For the grid search algorithm, first of
+all, the parameters affecting the model are determined and
+all values are given a range for their values. Then the
+algorithm tries all possible combinations and returns the
+best parameter values by using cross validation.
+ Grid search technique was applied on the validation
+set, the model was trained on the train set, and the success
+of the model was measured with the test set.</p>
+       <br>
+    <hr>
+       <h5>Results</h5>
+       <br>
+        <p>After the data set was finalized, it was divided into 3 parts
+as train, test and validation set. Train set was used for model,
+test set was used for prediction and validation set was used
+for grid search.
+ In the study, model creation, estimation, model tuning
+and cross validation processes were performed for 5 different
+algorithms, respectively. The k value for the cross validation
+was set as 10 and was used in that way in all algorithms. In
+the model tunning process, suitable parameters for grid
+search were searched. In the selection of these parameters,
+great care was taken to include the most frequently used
+parameters with a high success rate.</p>
+        <br>
+        <h7>KNN</h7>
+        <br>
+        <p>First, the model creation process started with the kNearest Neighbor algorithm. The KNN algorithm has a single
+parameter called n_neighbors. The best n_neighbors value
+was determined as 1, thanks to the model inserted into the
+grid search with a range of 1 to 50. With this parameter, the
+model was rebuilt and 81.7% accuracy value was obtained.
+With the Classification report, precision, recall, F1 values
+were reached. Then, the accuracy reliability was tested with
+the cross-validation method. With the cross-validation result
+of 82.9% accuracy, the modeling process was completed.
+KNN is one of the algorithms with the highest result.
+</p>
+        <br>
+        <h7>Naive Bayes</h7>
+        <br>
+        <p>Bayesian algorithm has a single parameter called
+var_smoothing. Grid search was run by determining the range. As a result, after obtaining 57% accuracy value, it reached
+56.5% with cross validation process, and the reliability of the
+result was observed.
+ Naive Bayes algorithm is the algorithm with the lowest
+accuracy value.
+</p>
+        <br>
+        <h7>ANN</h7>
+        <br>
+        <p>Artificial Neural Networks algorithm has too many
+parameters. In the project, some of these parameters are used
+for grid search.</p>
+        <p>The solver parameter is used for weight optimization.
+The alpha value is the parameter of the L2 penalty.
+The hidden_layer_size parameter determines the
+number of neurons in the hidden layers.
+The activation parameter is the activation function for
+hidden layers.
+ The best values of these parameters used were
+obtained as a result of grid search. While 76.3% accuracy
+value was obtained, this value was supported by 71%
+cross validation</p>
+       <br>
+        <h7>SVM</h7>
+        <br>
+        <p>There are 5 different kernel parameter values in the SVC
+algorithm. Two of them were taken in the project and separate
+models were created as they would work faster.
+</p>
+        <p>1) kernel =”rbf”
+C and gamma parameters were used in the SVCRBF model. The C parameter is the regularization
+parameter and must be a strictly positive value. gamma is
+the kernel coefficient. It is not used for every kernel. It
+has been added because it is convenient to use for RBF.</p>
+        <p>With the parameters selected in grid search, an
+accuracy value of 77.8% was obtained.</p>
+        <p>2) kernel = “linear”
+Only parameter C is used in this model. 65.4%
+accuracy value was obtained.
+</p>
+        <br>
+        <h7>RF</h7>
+        <br>
+        <p>The RF algorithm, which gave 80% accuracy in the first
+model, gave a lower accuracy (66%) after choosing the best
+parameters.
+That's why feature importance is done. This process
+determines the most important features and creates a model
+again with the parameters selected in grid search.</p>
+        <p>Feature importance clearly shows that categorical
+variables are unimportant in this operation.
+ With the repeated model creation process, 82.9%
+accuracy was achieved. Looking at the result, the RF model
+is the most successful one.</p>
+        <br>
+        <br>
+    <hr>
+        <p>As a result, to list the success of the models created, the
+3 most successful algorithms are: Random Forest, KNN,
+SVC-Rbf. The most unsuccessful algorithm that was decided
+not to be used in this study is Naive Bayes.</p>
+        <br>
+    <hr>
+       <h5>Conclusion</h5>
+        <br>
+        <p>As a result, an idea about the characteristics of the data
+was obtained with exploratory data analysis, statistical
+approaches and data visualization techniques on the dataset.
+Thus, a more realistic approach was made by recognizing the
+data in the data preprocessing steps. Preprocessing consisted
+of missing data analysis and filling in this data, outlier
+analysis and deletion of these values, searching and
+correcting false values, and deleting non-generalizable
+columns. The data distribution of the target column was
+examined and oversampling was performed with the SMOTE
+technique. KNN, Gaussian Naive Bayes, Support Vector
+Machines, Artificial Neural Networks, Random Forest
+models were created with the train set. And optimization was
+done on the validation set with grid search technique. While
+measuring the success of the model, accuracy, precision,
+recall, f1 score values were checked using the test set, and the
+most successful model, Random Forest model, was selected
+by evaluating the accuracy value. Thus, using this model,
+when a new music data comes in, its genre is determined.</p>
+       <br>
+        <br>
+    <hr>
+       <h5>References</h5>
+        <br>
+        <p>[1] https://en.wikipedia.org/wiki/Python_(programming_la
+nguage)</p>
+<p>[2] https://en.wikipedia.org/wiki/Anaconda_(Python_distri
+bution)</p>
+<p>[3] https://en.wikipedia.org/wiki/Spyder_(software</p>
+<p>[4] https://en.wikipedia.org/wiki/Pandas_(software)</p>
+<p>[5] https://en.wikipedia.org/wiki/NumPy</p>
+<p>[6] https://en.wikipedia.org/wiki/Matplotlib</p>
+<p>[7] https://analyticsindiamag.com/tutorial-on-missingnopython-tool-to-visualize-missing-values/</p>
+<p>[8] https://en.wikipedia.org/wiki/Scikit-learn</p>
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div class="jumbotron text-center">
+        <h3>Song's Genre Prediction using Machine Learning Algorithms</h3>
+        <br>
+        <p>With the developing technology, a transition to the digital
+world is observed in many sectors. The music industry is one
+of them. Spotify is one of the leading names in the digital
+music markets. Established in 2006, Spotify has been one of
+the most used music applications of recent times. This
+platform, which contains thousands of songs and playlists
+suitable for every style, every fashion, every moment, allows
+users to easily access the music they want with personalized
+recommendations.
+ This project aims to predict the type of songs in Spotify
+by their characteristics. The purpose of this is to increase the
+speed of reaching the right audience by predicting the genre
+of a new music.
+ For these purposes, the data set used in the project was
+examined in detail. By applying data preprocessing steps, the
+data has been brought into a usable form in machine learning
+algorithms. Then, accuracy calculations were made by
+choosing the most suitable algorithms for the content of the
+data. The algorithm model that gave the most reliable result
+was selected.
+</p>
+        <hr>
+    <h5> Dataset Information </h5>
+    <p>In the study, a data set containing the features of the songs
+in Spotify was used. In the data set, which contains 42305
+rows and 22 different variables, 11 of them are float64, 3 of
+them are int64 and 8 of them are object. This data set contains
+1 categorical type target column. The target column contains
+the genre of songs.</p>
+   <p>The aim of the study is to create a model that predicts the
+type of song according to the characteristics of the songs with
+machine learning algorithms. Before the model was created,
+a preliminary study was carried out on the data set containing
+categorically and numerically different types of variables.
+ First of all, the distribution of the target column and the
+statistical values of the numerical data were examined in
+order to get to know the data set more closely.</p>
+    <p>There are quite large distribution
+differences between the target values. This shows that under
+sampling or oversampling should be done before modeling.
+</p>
+    <p>The standard deviation of the
+variables named duration_ms and Unnamed: 0.1.1 is quite
+high. This indicates that there are very large deviations in the
+values of these variables.
+ Visualizations were made based on the questions
+extracted from the analyzed data set. Graphs where data such
+as distribution, density, boxplot can be examined from
+different perspectives are examined. The visualizations
+helped us get more accurate information about some
+variables. For this reason, it is a very important step to do
+before data preprocessing.</p>
+    <p>It was understood
+that some of the variables that were evaluated numerically
+were actually categorical.</p>
+    <p>When the densities of the numeric values are examined, it is observed that the energy value firstly
+shows a left-skewed intensity, while the duration_ms value is
+right-skewed. However, there is an exponential density
+distribution throughout the table.</p>
+    <p> Boxplots are graphs that provide information about
+outliers. For this reason, boxplots of all variables according
+to types were examined. There are
+outlier values in the data. Based on these graphics, it was
+decided that outlier analysis should definitely be done. After getting to know and examining the data thoroughly,
+the actions to be taken on it were determined and studies were
+continued in this direction.
+</p>
+    <p>After all the processes were completed, modeling processes
+were started with the data set, which has 80250 rows and 29
+columns.
+</p>
+    <br>
+        <hr>
+    <h5> Dataset Visualization </h5>
+        <br>
+        <hr>
+    <h5> About The Team </h5>
+    <p>Burcu Ölmez 2017510084</p>
+    <p>Zeynep Kaya 2017510048</p>
+    <hr>
+    </div>
+
+
+{% endblock %}
